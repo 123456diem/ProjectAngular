@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="col-sm-8" style="float: left;">
+        <div class="card col-sm-5" style="float: left;margin-right:20px;margin-bottom: 20px " *ngFor='let l of listSubject | paginate: { itemsPerPage: itemPerPage, currentPage: currentPage }'>
+            <img src="assets/images/{{l.Logo}}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{l.Name}}</h5>
+                <a href="#" class="btn btn-primary">Thi nào</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4" style="float: left;">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-list-alt"></i><a [routerLink]="['/listsubject']" style="color: black">Danh mục môn
+                    học</a>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"
+                    *ngFor='let l of listSubject | paginate: { itemsPerPage: 9, currentPage: 1 }'><a
+                        [routerLink]="['/listsubject',l.Id]" style="color: black">{{l.Name}}</a></li>
+            </ul>
+        </div>
+    </div>
+    <nav aria-label="Page navigation example" style="float: left;margin-left: 220px">
+        <ul class="pagination">
+          <li class="page-link">Up</li>
+          <li class="page-link" (click)='backPage()'><i class="fas fa-arrow-left" ></i></li>
+          <li class="page-link" (click)='nextPage()'><i class="fas fa-arrow-right" ></i></li>
+          <li class="page-link" (click)='LastPage()'>Down</li>
+        </ul>
+      </nav>
+</div>
