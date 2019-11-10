@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="card" *ngIf='finish1'>
+        <div class="card-header">
+            <span class="title">{{subjectForId.Name}}</span>
+        </div>
+        <div class="card-body">
+            <span *ngFor='let q of question | paginate: { itemsPerPage: itemPerPage, currentPage: currentPage }'>
+                <span class="question">{{currentPage}}. {{q.Text}}</span>
+            </span><br>
+            <hr>
+            <div class="form-check" *ngFor = 'let a of answer'>
+                <input class="form-check-input" type="radio" name="exampleRadios" [(ngModel)]="correctAns[currentPage - 1]" [ngModelOptions]="{standalone: true}" value='{{a.Id}}'>
+                <label class="form-check-label" for="exampleRadios1" >
+                    {{a.Text}}
+                </label>
+            </div>
+        </div>
+        <div class="card-header">
+            <span style="float: left">Question: {{currentPage}} of {{totalPage}}</span>
+            <span style="float: right"><button type="submit" class="btn btn-sm btn-info"
+                    (click)='finish()' *ngIf='buttonFinish'>Finish</button></span>
+        </div>
+    </div>
+
+    <nav aria-label="Page navigation example" style="float: right;margin-left: 220px" *ngIf='finish1'>
+        <ul class="pagination">
+            <li class="page-link" (click)='firstPage()'>Up</li>
+            <li class="page-link" (click)='backPage()'><i class="fas fa-arrow-left"></i></li>
+            <li class="page-link" (click)='nextPage()'><i class="fas fa-arrow-right"></i></li>
+            <li class="page-link" (click)='LastPage()'>Down</li>
+       
+        </ul>
+    </nav>
+    <div class="card finish" *ngIf='finished'>
+        <div class="card-header title">
+            Finish
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Want to finish the test?</h5>
+            <hr>
+            <div class="yn">
+                <button type="submit" class="btn btn-primary" (click) ='yesQuestion()'>Yes</button>
+                <button type="submit" class="btn btn-primary" (click) ='noQuestion()'>No</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="card finish" *ngIf='congratulation'>
+        <div class="card-header title">
+            congratulations
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Your Marks: {{sumMark}}</h5>
+            <hr>
+        </div>
+    </div>
+</div>

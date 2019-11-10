@@ -1,0 +1,94 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- Menu -->
+<div class="col-sm-4" style="float: left;height: 130px;margin-bottom: 50px;background-color: #F9F7AA">
+  <img src="assets/images/logo2.png" alt="" style="height: 100px;margin-top: 15px;margin-left:100px">
+</div>
+<div class="col-sm-8" style="float: left;height: 130px;background-color: #F9F7AA;margin-bottom: 50px">
+  <div class="col-sm-12" style="margin-top: 10px">
+    <form class="form-inline" style="margin-left: 700px">
+      <input type="text" placeholder="Search Keywords" class="form-control-sm">
+      <button style="border-radius: 3px"><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+  <div class="col-sm-12" style="margin-top: 10px">
+    <nav class="navbar navbar-expand-sm" style="margin-left: 50px">
+      <a [routerLink]="['home']" class="nav-link" style="color: black;font-family:Bookman, Tahoma, Verdana;">ONLINE
+        TRAINING</a>
+      <a [routerLink]="['about']" class="nav-link" style="color: black;font-family:Bookman, Tahoma, Verdana;">ABOUT US</a>
+      <a [routerLink]="['contact']" class="nav-link" style="color: black;font-family:Bookman, Tahoma, Verdana;">CONTACT</a>
+      <a [routerLink]="['feedback']" class="nav-link" style="color: black;font-family:Bookman, Tahoma, Verdana;">FEEDBACK</a>
+      <a [routerLink]="['q&a']" class="nav-link" style="color: black;font-family:Bookman, Tahoma, Verdana;">Q&A</a>
+      <div class="dropdown" style="margin-left: 200px">
+        <a href="#" style="color: black;font-family:Bookman, Tahoma, Verdana;" class="dropdown-toggle"
+          data-toggle="dropdown">
+          ACCOUNTS
+        </a>
+        <ul class="dropdown-menu">
+          <a class="dropdown-item" [routerLink]="['resign']">Resigter</a>
+          <a class="dropdown-item" [routerLink]="['login']">Login </a>
+          <a class="dropdown-item" [routerLink]="['forgot']">
+            Forgot password</a>
+          <a class="dropdown-item" [routerLink]="['change']">Change Password</a>
+          <a class="dropdown-item" [routerLink]="['update']">Update Account</a>
+          <a class="dropdown-item" href="#">LogOut</a>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- Nội dung -->
+<router-outlet></router-outlet>
+
+<!-- Boter -->
+<div class="col-sm-12" style="background-color:#F9F7AA;float: left;margin-top: 50px;height: 400px">
+  <div class="container col-sm-8" style="margin-top: 50px">
+    <div class="col-sm-3" style="float: left">
+      <span><strong>Our Net work</strong></span><br><br>
+      <a href="#" style="color: #F99135">Brusheezy</a><br>
+      <a href="#" style="color: #F99135">Vecteezy</a><br>
+      <a href="#" style="color: #F99135">Videezy</a><br>
+      <a href="#" style="color: #F99135">Themzy</a><br>
+      <a href="#" style="color: #F99135">Become a Contributor</a>
+    </div>
+    <div class="col-sm-3" style="float: left">
+      <span><strong>Site Links</strong></span><br><br>
+      <a href="#" style="color: #F99135">Deal</a><br>
+      <a href="#" style="color: #F99135">Suport</a><br>
+      <a href="#" style="color: #F99135">DMCA</a><br>
+      <a href="#" style="color: #F99135">Licensing Agreement</a><br>
+    </div>
+    <div class="col-sm-3" style="float: left">
+      <span><strong>Languages</strong></span><br><br>
+      <a href="#" style="color: #F99135">English</a><br>
+      <a href="#" style="color: #F99135">Tiếng Việt</a><br>
+      <a href="#" style="color: #F99135">Italy</a><br>
+      <a href="#" style="color: #F99135">Español</a><br>
+      <a href="#" style="color: #F99135">Português</a></div>
+    <div class="col-sm-3" style="float: left">
+      <span><strong>About Us</strong></span><br><br>
+      <a href="#" style="color: #F99135">Our Team</a><br>
+      <a href="#" style="color: #F99135">Our Blog</a><br>
+      <a href="#" style="color: #F99135">About Us</a><br>
+      <a href="#" style="color: #F99135">Contact Us</a><br>
+    </div>
+    <hr>
+  </div>
+  <div class="container col-sm-12" style="margin-top: 50px;float: left;">
+    <hr>
+    <div class="col-sm-5" style="margin-left:100px;float: left;">
+      <img src="assets/images/botlogo.png" alt="" style="width: 50px;height: 50px;">
+      <a href="#" style="margin-left: 50px"><i class="fab fa-facebook-square icon"></i></a>
+      <a href="#" style="margin-left: 10px"><i class="fab fa-twitter icon"  ></i></a>
+      <a href="#" style="margin-left: 10px"><i class="fab fa-pinterest icon" ></i></a>
+      <a href="#" style="margin-left: 10px"><i class="fab fa-youtube icon"></i></a>
+      <a href="#" style="margin-left: 10px"><i class="fab fa-instagram icon"></i></a>
+      <a href="#" style="margin-left: 10px"><i class="fab fa-snapchat-ghost icon"></i></a>
+      <a href="#" style="margin-left: 10px"><i class="fab fa-linkedin-in icon"></i></a>
+      <a href="#" style="margin-left: 10px"><i class="fab fa-dribbble icon"></i></a>
+    </div>
+    
+    <div class="col-sm-5" style="float: left;margin-left:50px ">
+      © 2019 Eezy Inc. All rights reserved • Terms of Use Privacy Policy
+    </div>
+  </div>
+</div>

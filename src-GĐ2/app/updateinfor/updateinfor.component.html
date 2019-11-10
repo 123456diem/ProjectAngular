@@ -1,0 +1,57 @@
+<div *ngIf='!showInfor'>
+    <span style="font-size: 50px;color:#F99135;margin-left:660px"><strong>UserName</strong></span>
+    <div class="col-sm-8" style="margin-left: 530px;margin-top:20px">
+        <div>
+            <div class="input-group mb-3 col-sm-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                    aria-describedby="basic-addon1" [(ngModel)]="userNameInfor" [ngModelOptions]="{standalone: true}">
+            </div>
+            <button class="btn  btn-info" style="margin-left: 190px;margin-bottom: 20px" (click)='watchInfor()'>Watch
+                Infor</button><br>
+        </div>
+    </div>
+</div>
+<div *ngIf='showInfor'>
+    <span style="font-size: 50px;color:yellow;margin-left:620px"><strong>Update Infor</strong></span>
+    <div class="col-sm-6" style="margin-left: 400px;margin-top:20px">
+        <form style="margin-top: 50px">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class="lable">Full name</label>
+                    <input type="email" class="form-control" [(ngModel)]='formStudent.fullName' 
+                        [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="lable">Gender</label>
+                    <input type="email" class="form-control" [(ngModel)]='formStudent.gender'
+                    [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="lable">Email</label>
+                    <input type="email" class="form-control" [(ngModel)]='formStudent.email'
+                    [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="lable">Birthday</label>
+                    <input type="email" class="form-control" [(ngModel)]='formStudent.birthday'
+                    [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="lable">School fee</label>
+                    <input type="email" class="form-control" [(ngModel)]='formStudent.schoolfee'
+                    [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="lable">Mark</label>
+                    <input type="email" class="form-control" [(ngModel)]='formStudent.mark'
+                    [ngModelOptions]="{standalone: true}">
+                </div>
+            </div>
+            <button class="btn btn-lg btn-info" style="float: left;margin-left: 250px" (click)='update()'>Update</button>
+            <button class="btn btn-lg btn-info" style="float: left;margin-left: 30px" (click)='back()'>Back</button>
+        </form>
+    </div>
+</div>

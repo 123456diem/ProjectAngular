@@ -1,0 +1,14 @@
+
+.card{
+    float: left;
+    margin: 20px;
+    height: 300px
+}
+.card img{
+    width: 50%;
+    margin: auto;
+}
+/* .btn{
+   margin-top:30px;
+
+} */
