@@ -1,0 +1,27 @@
+.title{
+    color: purple;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px
+}
+.question{
+    color: blue;
+    font-weight: bold
+}
+.finish{
+    margin-left: 300px;
+    float: left;
+    width: 500px
+}
+.card-body h5{
+    margin-left: 130px
+}
+.card-body button{
+    margin-left: 20px;
+}
+.yn{
+    margin-left: 150px
+}
+.container{
+    height: 800px;
+}
